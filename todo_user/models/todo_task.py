@@ -11,3 +11,11 @@ class saleorder(models.Model):
    _inherit = ['sale.order']
    task_id = fields.Many2one('todo.task', 'Tarea')
 
+class RecibosHonorarios(models.Model):
+   _name = 'recibos.honorarios'
+   _inherit = ['account.invoice']
+
+class RecibosHonorariosLine(models.Model):
+   _name = 'recibos.honorarios.line'
+   _inherit = ['account.invoice.line']
+
